@@ -3,6 +3,7 @@ from . import cookies, simple_pages
 
 def create_app():
   app = Flask(__name__)
+  app.config.from_object('app.config')
 
   register_blueprints(app)
 
